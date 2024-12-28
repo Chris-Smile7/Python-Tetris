@@ -1,12 +1,13 @@
 import pygame
 from copy import deepcopy
 from random import choice, randrange
+import argparse as parser
 
 W, H = 10, 20
 TILE = 45
 GAME_RES = W * TILE, H * TILE
 RES = 750, 940
-FPS = 60
+FPS = 45
 
 pygame.init()
 sc = pygame.display.set_mode(RES)
@@ -90,7 +91,7 @@ while True:
             elif event.key == pygame.K_RIGHT:
                 dx = 1
             elif event.key == pygame.K_DOWN:
-                anim_limit = 100
+                anim_limit = 50
             elif event.key == pygame.K_UP:
                 rotate = True
     # move x
